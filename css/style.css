@@ -1,0 +1,570 @@
+::-webkit-scrollbar {
+    width: 2.5vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #364149;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+html {
+    scrollbar-width: thin;
+}
+
+body {
+    background-color: white;
+    color: #27343D;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 0vh;
+    scrollbar-color: #888 #f1f1f1;
+    overflow-x: hidden;
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+   /*justify-content: space-between;*/
+    align-items: center;
+    background-color: #27343D;
+    padding: 10px 20px;
+    z-index: 1;
+    box-shadow: 10px 5px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.head img {
+    height: 50px;
+}
+
+.head a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MENU */
+.content {
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 100vh;
+    width: 25vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #26323b;
+    padding: 10px 20px;
+    z-index: 0;
+    border-bottom: 2px solid white;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebarlinks {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 110px;
+    margin-left: 0.6vh;
+    line-height: 2.5;
+}
+
+.sidebarlinks li {
+    margin-bottom: 1vh;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #C0C7CD;
+}
+
+.sidebarout {
+    position: fixed;
+    top: 93vh;
+    margin-left: -26px;
+}
+
+.sidebarout a:hover {
+    transition: color 0.3s;
+    color: #f83e51;
+}
+
+.sidebaricon {
+    color: #ffffff;
+}
+
+/* FIM MENU */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizar horizontalmente */
+    min-height: 100vh;
+    width: 54vh;
+    padding-top: 0vh;
+    margin-left: 85vh;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+.text-center-descricao {
+    font-family: 'Roboto Flex', sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 0.5;
+    margin-top: 40%; /* Remova a margem lateral */
+}
+
+.text-center-titulo {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.row {
+    align-items: center;
+    width: 750px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px; 
+}
+
+.hrline {
+    align-items: center;
+    margin: 1rem 0;
+    width: 80%;
+    margin-left: 20vh;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}
+
+.rowTable {
+    align-items: center;
+    margin-right: 25vh;
+    width: 100%;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    justify-content: center;  
+}
+
+.TableClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizar elementos horizontalmente */
+    width: 100%; /* Use 100% da largura do container */
+    width: 60vh;
+    margin-top: 10vh; /* Remova a margem lateral */
+}
+
+.table {
+    border-collapse: collapse;
+    width: 70vh;
+    margin-right: 15%;
+
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.selection-radios {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.selection-radios input[type="radio"] {
+    display: none;
+}
+
+.selection-radios label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.selection-radios label:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.selection-radios label:after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #27343D;
+}
+
+.selection-radios input[type="radio"]:checked + label:after {
+    display: block;
+}
+
+/* Estilos personalizados para os botões */
+.custom-button {
+    background-color: #27343D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 110px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #1A2733;
+}
+
+.input-submit-custom {
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #27343D;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    float: right;
+    margin-top: 10px;
+}
+
+.input-submit-custom:hover {
+    background-color: #1A2733;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.data-box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 39vh;
+}
+
+.data-box h2 {
+    margin-top: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .navbar img {
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+
+    input[type="text"] {
+        margin-bottom: 5px;
+    }
+
+    .input-submit-custom {
+        width: 100%;
+        float: none;
+        margin-top: 5px;
+    }
+
+    .data-box {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+/* Estilo para a primeira linha da tabela */
+.table-custom th.th-first {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    width: auto;
+}
+
+/* Estilo para as células da tabela */
+.table-custom td {
+    text-align: center;
+}
+
+/* Estilo para os botões personalizados */
+.custom-button {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-button:hover {
+    background-color: #1e2124;
+}
+
+/* Estilo para a mensagem de erro */
+.error-message {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+/* Estilo para a seleção de rádio */
+.selection-radios input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Remova o estilo de fundo */
+.masthead {
+    background-image: none;
+    background-color: transparent;
+}
+
+/* Aumente o espaço para a imagem logofs.png */
+.col-lg-6:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para o autonomos */
+.row-autonomos {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45vh;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+@media (max-width: 740px) {
+
+    body {
+        background-color: white;
+        color: #27343D;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        max-width: 20vh;
+        scrollbar-color: #888 #f1f1f1;
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        min-height: 100vh;
+        width: 100%;
+        max-height: 100vh;
+        max-width: 100vh;
+        padding-top: 10vh;
+        margin-left: 65% !important;
+    }
+
+    
+    .head {
+        padding: 10px;
+        
+    }
+
+    .head img {
+        height: 30px;
+    }
+
+    .sidebar {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+        padding: 10px;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        background-color: #26323b;
+    }
+
+    .sidebarlinks{    
+        line-height: 1;
+    }
+
+    .sidebarout{
+        top: 29vh !important;
+    }
+
+    .sidebar.active {
+        opacity: 1;
+        visibility: visible;
+        width: 25vh;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .sidebarToggle {
+        display: block; /* Exibir o ícone de menu apenas em telas menores */
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .sidebarToggle:hover {
+        color: #C0C7CD;
+    }
+
+    .sidebar a {
+        display: none; /* Ocultar os itens do sidebar por padrão */
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease; 
+    }
+
+    .sidebar a:hover {
+        background-color: #1e2124;
+    }
+
+    .sidebar.active a {
+        display: block; /* Mostrar os itens do sidebar quando o menu está ativo */
+    }
+
+  
+.text-center-descricao {
+    margin-top: 20%;
+}
+
+.row {
+    display: flex; /* Adicionado para manter os itens alinhados */
+    flex-direction: column; /* Alterado para empilhar os itens verticalmente */
+    width: 100%;
+    max-width: 100%;
+}
+
+.col-md-4 {
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+.custom-button{
+    font-size: 12px;
+    width: 100px !important;
+    margin-left: 5vh;
+}
+
+.d-flex{
+    font-size: 12px;
+    width: 144px !important;
+    margin-right: 50vh;
+    margin-top: 20px;
+}
+.col-md-12{
+    width: 100vh;
+}
+
+
+.table, .buttonsClass{
+    width: 60%;
+    margin-left: 25% !important;
+}
+
+
+.data-box {
+    margin-left: 0;
+}
+
+}

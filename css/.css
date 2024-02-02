@@ -1,0 +1,151 @@
+body {
+    background-color: white;
+    color: #27343D;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #27343D;                      
+    padding: 10px 20px;
+    z-index: 999;
+    border-bottom: 2px solid white;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    min-height: 130vh;
+    padding-top: 10px; /* Increased the padding to reduce space */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced the margin */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.selection-radios {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.selection-radios input[type="radio"] {
+    display: none;
+}
+
+.selection-radios label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.selection-radios label:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.selection-radios label:after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #27343D;
+}
+
+.selection-radios input[type="radio"]:checked + label:after {
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    width: auto; /* Adjusted width to fit the content */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #27343D;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    float: right; /* Aligned to the right */
+    margin-top: 10px; /* Added space */
+}
+
+input[type="submit"]:hover {
+    background-color: #1A2733; /* Darker shade of blue on hover */
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.data-box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.data-box h2 {
+    margin-top: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
